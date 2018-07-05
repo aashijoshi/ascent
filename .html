@@ -1,0 +1,61 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+<title>Login</title>
+<script type="text/javascript">
+
+function setStyle(x)
+{
+	document.getElementById(x).style.background="#ffffcc";
+}
+function setDef(x)
+{
+	document.getElementById(x).style.background="white";
+}
+function popup(){
+    warning.style.display='block';
+    setTimeout(function(){
+      warning.style.display='none';
+    },2000);
+  }
+</script>
+<link rel="stylesheet" href="bootstrap.css">
+</head>
+<body class="container">
+<div id="whole">
+</br>
+<h1 align="center" style="color:#286090;">WELCOME PLEASE LOGIN HERE</h1</br>
+</br><br>
+<form action="login.php" class="form-horizontal">
+<div class="form-group" align="center">
+<table id="table">
+<u>
+
+<tr>
+<td>
+<input type="text" name="name" id="name"placeholder="Name"  class="form-control" onfocus="setStyle(this.id)" onblur="setDef(this.id)"><br><br>
+</td></tr>
+<tr>
+<td>
+<input type="password" name="pass" id="pass" placeholder="Password" class="form-control" onfocus="setStyle(this.id)" onblur="setDef(this.id)"><br><br>
+</td>
+</tr>
+<tr><td>
+<input type="submit" value="submit" align="center" class="btn btn-primary">
+</td></tr>
+
+</u>
+</table>
+</div>
+</form>
+
+<form action="newlogin.html" class="form-horizontal">
+<button type="submit" class="btn btn-warning btn-lg">Register here!</button>
+</form>
+
+
+</div>
+
+</body>
+
+</html>

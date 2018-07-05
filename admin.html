@@ -1,0 +1,83 @@
+<?php include("auth.php"); ?>
+<html>
+	<head>
+		<title>Admin panel</title>
+		<link rel="stylesheet" href="css/bootstrap.css">	
+		<link rel="stylesheet" href="css/style.css" />
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="Free HTML5 Template by FREEHTML5.CO" />
+		<meta name="keywords" content="free html5, free template, free bootstrap, html5, css3, mobile first, responsive" />
+	</head>
+	<body>
+		<div id="headercover">
+				<header role="banner" id="fh5co-header" style="width:100%;height:0%;">
+					<div class="container">
+						<nav class="navbar navbar-default">
+							<div class="row">
+								<div class="col-md-3">
+									<div class="fh5co-navbar-brand">
+										<a class="fh5co-logo" href="index.html">ASCENT UDAIPUR</a>
+									</div>
+								</div>
+								<div class="col-md-9 main-nav">
+									<ul class="nav text-right">
+										<li class="active"><a href="admin.php"><span>Home</span></a></li>
+										<li><a href="viewenquiry.php">View enquiries</a></li>
+										<li><a href="viewqueries.php">View messages</a></li>
+										<li><a href="viewadmin.php">View Admins</a></li>
+										<li><a href="admingallery.php">Gallery</a></li>
+										<li><a href="logout.php">Logout</a></li>
+									</ul>
+								</div>
+							</div>
+						</nav>
+				  </div>
+				</header>
+			</div>
+			<br><br><br>
+			<h1 id="enquiryform" align="center">Welcome <?php echo $_SESSION['username']; ?>.</h1>
+		<div align="center" class="container">
+		&oslash To create a new admin enter the username and password for new admin.
+			<h2 id="aboutus">Create new admin</h2>
+			<div class="col-md-8 animate-box col-md-offset-4" align="left">
+					<form action="createadmin.php" method="POST">
+						<div class="form-group row">
+							<div class="col-md-6 field">
+								<label for="newadmin">Username</label>
+								<input type="text" pattern="[A-Za-z_s]*" name="newadmin" id="newadmin" class="form-control" title="You can use only alphabets and underscore in username" required/>
+							</div>
+						</div>	
+						
+						<div class="form-group row">
+							<div class="col-md-6 field">
+								<label for="newpassword">Password</label>
+								<input type="password" name="newpassword" id="newpassword" class="form-control" required/>
+							</div>
+						</div>
+						
+						<div class="form-group row">
+							<div class="col-md-6 field">
+								<label for="confirmnewpassword">Confirm Password</label>
+								<input type="password" name="confirmnewpassword" id="confirmnewpassword" class="form-control" required/>
+							</div>
+						</div>
+
+						<div class="form-group row">
+							<div class="col-md-6 field">
+								<input type="checkbox" onchange="document.getElementById('newpassword').type = this.checked ? 'text' : 'password'; document.getElementById('confirmnewpassword').type = this.checked ? 'text' : 'password';" class="showpass"><span font-size="25%"> Show password</span>
+							</div>
+						</div>
+									
+						
+						<div class="form-group row">
+							<div class="col-md-12 field">
+								<input type="submit" id="submit" class="btn btn-primary" value="Create">
+							</div>
+						</div>
+					</form>
+			</div>
+		</div>
+	</body>
+</html>
